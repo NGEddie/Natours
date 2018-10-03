@@ -2,25 +2,25 @@
     max-width: $grid-width;
     margin: 0 auto;
 
-    @include respond(tab-port) {
-       max-width: 50rem;
-    }
-
-    @include respond(phone) {
-       max-width: 30rem;
-    }
-
     &:not(:last-child) {
         margin-bottom: $gutter-vertical;
 
         @include respond(tab-port) {
             margin-bottom: $gutter-vertical-small;
-            padding: 0 3rem;
         }
 
         @include respond(phone) {
             margin-bottom: $gutter-vertical-tiny;
         }
+    }
+
+    @include respond(tab-port) {
+        max-width: 60rem;
+        padding: 0 3rem;
+    }
+
+    @include respond(phone) {
+       max-width: 50rem;
     }
 
     @include clearfix;
@@ -33,7 +33,14 @@
 
             @include respond(tab-port) {
                 margin-right: 0;
-                margin-bottom: $gutter-vertical-small;
+                margin-bottom: 4rem;
+                float: none;
+            }
+
+            @include respond(phone) {
+                margin-right: 0;
+                margin-bottom: 2rem;
+                float: none;
             }
         }
 

@@ -5,17 +5,26 @@
   color: $color-grey-light-1;
 
   @include respond(tab-port){
-    padding: 8rem;
+    padding: 8rem 2rem;
+  }
+
+  @include respond(phone){
+    padding: 5rem 2rem;
   }
 
   &__logo-box {
     text-align: center;
     margin-bottom: 8rem;
+
+    @include respond(tab-port){
+      margin-bottom: 4rem;
+    }
   }
 
   &__logo {
     width: 15rem;
     height: auto;
+
   }
 
   &__navigation {
@@ -26,6 +35,7 @@
     @include respond(tab-port){
       width: 100%;
       text-align: center;
+      padding-top: 4rem;
     }
   }
 
@@ -38,6 +48,10 @@
     
     &:not(:last-child) {
       margin-right: 1.5rem;
+
+      @include respond(tab-port){
+        margin-right: 3rem;
+      }
     }
   }
 
